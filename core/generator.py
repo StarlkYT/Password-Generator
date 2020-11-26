@@ -1,4 +1,5 @@
 from random import randint
+
 def generator(length=2, alphabetic=True, numeric=False, special=False):
     """
     Generates a string with the given parameters as options
@@ -11,7 +12,6 @@ def generator(length=2, alphabetic=True, numeric=False, special=False):
     ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     SPECIALS = r"!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"
     NUMBERS  = "123456789"
-
     if 2 <= length <= 32:
         password = ""
         for foo in range(length):
