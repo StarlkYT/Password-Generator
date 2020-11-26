@@ -1,2 +1,5 @@
+from core.interface import Interface
+
 if __name__ == "__main__":
-    pass
+    interface = Interface()
+    interface.show()

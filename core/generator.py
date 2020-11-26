@@ -1,6 +1,6 @@
 from random import randint
 
-def generator(length=2, alphabetic=True, numeric=False, special=False):
+def generator(length=2, alphabetic=False, numeric=False, special=False):
     """
     Generates a string with the given parameters as options
     :param alphabetic: Adds alphabet letters: A B C...
