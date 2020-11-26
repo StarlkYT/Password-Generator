@@ -17,6 +17,7 @@ class Interface:
 
     def start(self):
         _password = generator(self.length_scale.get(), self.checked_alphabet.get(), self.checked_numeric.get(), self.checked_special.get())
+        self.password_entry.delete(0, "end")
         self.password_entry.insert(0, _password)
 
     def menu(self):
