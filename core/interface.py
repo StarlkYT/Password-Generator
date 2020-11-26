@@ -17,7 +17,7 @@ class Interface:
 
     def start(self):
         _password = generator(self.length_scale.get(), self.checked_alphabet.get(), self.checked_numeric.get(), self.checked_special.get())
-        self.password_label.configure(text=_password)
+        self.password_entry.insert(0, _password)
 
     def menu(self):
         self.label_frame = tkinter.LabelFrame(self.root, text="Settings:")
@@ -31,7 +31,7 @@ class Interface:
         self.special_checkbox  = tkinter.Checkbutton(self.label_frame,  text="Contains specials",  variable=self.checked_special)
 
         # "Enter" to get password & {password} label
-        self.password_label        = tkinter.Label(self.label_frame, text="")
+        self.password_entry        = tkinter.Entry(self.label_frame, text="")
         self.password_enter_button = tkinter.Button(self.label_frame, text="Enter", command=self.start)
 
         # Packs
@@ -47,7 +47,7 @@ class Interface:
         self.length_scale.pack()
 
         # Show password
-        self.password_label.pack()
+        self.password_entry.pack()
         self.password_enter_button.pack()
 
     def show(self):
